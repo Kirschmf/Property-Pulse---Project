@@ -1,15 +1,15 @@
 import React from 'react';
-import Link from 'next/link';
-import '@/assets/styles/globals.css'
+// import Link from 'next/link';
+// import '@/assets/styles/globals.css'
+import Hero from '@/components/Hero'
+import InfoBoxes from '@/components/InfoBoxes'
 
 const HomePage = () => {
   return (
-    <div>
-        <h1 className="text-3xl">
-            Welcome to Property Pulse
-        </h1>
-        <Link href="/properties">Show Properties</Link>
-    </div>
+    <>
+      <Hero/>
+      <InfoBoxes/>
+    </>
   )
 }
 
