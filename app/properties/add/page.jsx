@@ -2,8 +2,8 @@ import React from 'react'
 
 const PropertyAddPage = () => {
   return (
-    <div>page</div>
+    <div>PropertyAddPage</div>
   )
 }
 
-export default page
+export default PropertyAddPage
