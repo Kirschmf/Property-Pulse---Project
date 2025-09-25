@@ -1,14 +1,14 @@
 import React from 'react';
-// import Link from 'next/link';
-// import '@/assets/styles/globals.css'
 import Hero from '@/components/Hero'
 import InfoBoxes from '@/components/InfoBoxes'
+import HomeProperties from '@/components/HomeProperties';
 
 const HomePage = () => {
   return (
     <>
       <Hero/>
       <InfoBoxes/>
+      <HomeProperties/>
     </>
   )
 }
