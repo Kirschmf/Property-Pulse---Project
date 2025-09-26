@@ -1,24 +1,24 @@
 import { connect } from 'http2';
 import mongoose from 'mongoose';
 
-let connected = false;
+let isConnected = false;
 
 const connectDB = async ( ) => {
     mongoose.set('strictQuery', true)
 
     // If the database is already connected, do not connect again!!!
     
-    if(connected) {
+    if(isConnected) {
         console.log('MongoDB is already connected');
         return;
     }
-
+    
     // Connect to MongoDB
 
     try{
         await mongoose.connect(process.env.MONGODB_URI);
-        connectDB = true;
-        console.log('MondoDB connected...')
+        isConnected = true;
+        console.log('MongoDB connected...')
     } catch (error) {
         console.log(error);
 
