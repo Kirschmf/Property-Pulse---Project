@@ -17,6 +17,7 @@ const InfoBoxes = () => {
                 backgroundColor: 'bg-black'
             }}>
                 Find your dream rental property. Bookmark properties and contact owners.
+                344
             </InfoBox>
 
             <InfoBox

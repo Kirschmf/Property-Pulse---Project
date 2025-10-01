@@ -1,19 +1,23 @@
 import connectDB from "@/config/database";
 import Property from "@/models/Property";
 
-//Get /api/properties/:id
-export const GET  = async (request, { params }) => {
 
+//Get /api/properties/:id
+export async function GET(request, { params }) {
     try {
         await connectDB();
 
-        const property = await Property.findById(params.id);
+        // ✅ Await params before accessing its properties
+        const { id } = await params;
 
-            if(!property) return new Response('Property Not Found', {status: 404});
+        const property = await Property.findById(id);
 
-        return new Response(JSON.stringify(property), {status: 200,});
+        if (!property) {
+            return new Response('Property Not Found', { status: 404 });
+        }
+
+        return new Response(JSON.stringify(property), { status: 200 });
     } catch (error) {
-        console.log(error);
-        return new Response('Something Went Wrong', {status: 500});
+        return new Response('Something went wrong', { status: 500 });
     }
-}
+};

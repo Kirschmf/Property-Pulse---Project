@@ -19,19 +19,19 @@ const PropertySchema = new Schema({
     },
     location: {
         street: {
-            type: String,
+            type: String
             
         },
         city: {
-            type: String,
+            type: String
 
         },
         state: {
-            type: String,
+            type: String
 
         },
         zipcode: {
-            type: String,
+            type: String
 
         }
     },
@@ -50,44 +50,43 @@ const PropertySchema = new Schema({
     amenities: [
         {
             type: String,
-        },
+        }
     ],
     rates: {
         nightly: {
-            type: Number,
+            type: Number
         },
         weekly: {
-            type: Number,
+            type: Number
         },
         monthly: {
-            type: Number,
-        },
+            type: Number
+        }
     },
     seller_info: {
         name: {
-            type: String,
+            type: String
         },
         email: {
-            type: String,
+            type: String
         },
         phone: {
-            type: String,
+            type: String
         }
     },
     images: [
         {
-            type: String,
+            type: String
         }
     ],
     is_featured: {
         type: Boolean, 
-        default: false,
+        default: false
     }
 
 }, {
     timestamps: true
-}
-);
+});
 
 const Property = models.Property || model('Property', PropertySchema);
 
