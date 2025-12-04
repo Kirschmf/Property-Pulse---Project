@@ -91,3 +91,6 @@ const PropertySchema = new Schema({
 const Property = models.Property || model('Property', PropertySchema);
 
 export default Property;
+
+
+//just testing if this is the correct repo, if its everything ok.
